@@ -10,3 +10,9 @@ brew install <FORMULA>
 ```
 
 ## Formula
+| Repository | Formula | Description |
+| ---------- | ------- | ----------- |
+| [tailorctl](https://github.com/tailor-platform/tailorctl) | [formula](Formula/tailorctl.rb) | Command line tools for Tailor Platform |
+
+## Documentation
+`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh/)
