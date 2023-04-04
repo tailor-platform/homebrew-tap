@@ -10,9 +10,9 @@ class Tailorctl < Formula
   depends_on "cue" => :optional
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/tailor-platform/tailorctl/releases/download/0.0.1/tailorctl_darwin_0.0.1_x86_64.tar.gz"
-      sha256 "daaccb6991535ad543db58800f07329a264d9efd522885b2a0288f0d38a3adc4"
+    if Hardware::CPU.arm?
+      url "https://github.com/tailor-platform/tailorctl/releases/download/0.0.1/tailorctl_darwin_0.0.1_arm64.tar.gz"
+      sha256 "ac2224f0a50f3595ce02495491dbec44140a18f30ee021d8eda9f9d5c8800a6d"
 
       def install
         bin.install "tailorctl"
@@ -24,9 +24,9 @@ class Tailorctl < Formula
         (fish_completion/"tailorctl.fish").write fish_output
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/tailor-platform/tailorctl/releases/download/0.0.1/tailorctl_darwin_0.0.1_arm64.tar.gz"
-      sha256 "759fef82d32ee7cead20b21120a0d74860d6bfced31d76fa497c0e1d147d720c"
+    if Hardware::CPU.intel?
+      url "https://github.com/tailor-platform/tailorctl/releases/download/0.0.1/tailorctl_darwin_0.0.1_x86_64.tar.gz"
+      sha256 "2cb57aabdb9b242c0501d8b2c7f04d9cce8ca00c1edb75b9e595ba96494ce22b"
 
       def install
         bin.install "tailorctl"
@@ -43,7 +43,7 @@ class Tailorctl < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/tailor-platform/tailorctl/releases/download/0.0.1/tailorctl_linux_0.0.1_arm64.tar.gz"
-      sha256 "3d14b03c32b406cfb17170ea2462ff5795915b5f89b84f813c5157b0363ee857"
+      sha256 "f63b0ec4cd869d34f5aaac115df7ea82d5ab120b860a385a0f31f4d9b6b66ae0"
 
       def install
         bin.install "tailorctl"
@@ -57,7 +57,7 @@ class Tailorctl < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/tailor-platform/tailorctl/releases/download/0.0.1/tailorctl_linux_0.0.1_x86_64.tar.gz"
-      sha256 "d6fe93435dc23c2d511785f4dd8068d86bc67045ef0d76f8199ac631f73c881c"
+      sha256 "4064db16afaab5369fca5ca09de6c08a18d4d96efd240fa067fe59625731208e"
 
       def install
         bin.install "tailorctl"
