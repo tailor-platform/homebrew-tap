@@ -1,6 +1,6 @@
 # homebrew-tap
 
-Homebrew formulae that allows installation of tailor platform's coomand line tools through the [Homebrew](https://brew.sh/) package manager.
+Homebrew formula that allows installation of tailor platform's comand line tools through the [Homebrew](https://brew.sh/) package manager.
 
 ## Installation
 
