@@ -5,14 +5,14 @@
 class Tailorctl < Formula
   desc "Command line tool for Tailor Platform'"
   homepage "https:/tailor.tech"
-  version "0.4.1"
+  version "0.4.2"
 
   depends_on "cue" => :optional
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/tailor-platform/tailorctl/releases/download/v0.4.1/tailorctl_darwin_v0.4.1_x86_64.tar.gz"
-      sha256 "fa4e0bbc2fa3b36ef47d5d15c1353194349c5782755abd1cd6a81626cdac4dbe"
+    if Hardware::CPU.arm?
+      url "https://github.com/tailor-platform/tailorctl/releases/download/v0.4.2/tailorctl_darwin_v0.4.2_arm64.tar.gz"
+      sha256 "c46d9a4ab3097ac66e85eef45897edc509744ae15a81bbeb033df900a89f2c52"
 
       def install
         bin.install "tailorctl"
@@ -24,9 +24,9 @@ class Tailorctl < Formula
         (fish_completion/"tailorctl.fish").write fish_output
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/tailor-platform/tailorctl/releases/download/v0.4.1/tailorctl_darwin_v0.4.1_arm64.tar.gz"
-      sha256 "a57468107dbcea0153c942c8a0c6b580354f2680d01463dbe723448dd387b98f"
+    if Hardware::CPU.intel?
+      url "https://github.com/tailor-platform/tailorctl/releases/download/v0.4.2/tailorctl_darwin_v0.4.2_x86_64.tar.gz"
+      sha256 "41599bc731e96baf61d3f0fca15b889579e18f4147a755ff27c2af0bf2be3fca"
 
       def install
         bin.install "tailorctl"
@@ -41,9 +41,9 @@ class Tailorctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/tailor-platform/tailorctl/releases/download/v0.4.1/tailorctl_linux_v0.4.1_x86_64.tar.gz"
-      sha256 "8983e2277bf094dc3f241f6647f6d35c1977d57c798773d5ede7d1fb7f48e920"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tailor-platform/tailorctl/releases/download/v0.4.2/tailorctl_linux_v0.4.2_arm64.tar.gz"
+      sha256 "69e8147450d286b276a406291cf76a6513cb317ad63b01bae07566311de91eed"
 
       def install
         bin.install "tailorctl"
@@ -55,9 +55,9 @@ class Tailorctl < Formula
         (fish_completion/"tailorctl.fish").write fish_output
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tailor-platform/tailorctl/releases/download/v0.4.1/tailorctl_linux_v0.4.1_arm64.tar.gz"
-      sha256 "ea3a60268c2a22b64518e5bd751db26a4fd8d14560b248dffa433dea8560338c"
+    if Hardware::CPU.intel?
+      url "https://github.com/tailor-platform/tailorctl/releases/download/v0.4.2/tailorctl_linux_v0.4.2_x86_64.tar.gz"
+      sha256 "83e567010f17e48963ac1f742af6ae59c162014cb2cd1284dec96a538b2341b2"
 
       def install
         bin.install "tailorctl"
