@@ -4,14 +4,14 @@
 class Tailorctl < Formula
   desc "Command line tool for Tailor Platform'"
   homepage "https://tailor.tech"
-  version "1.16.0"
+  version "1.17.0"
 
   depends_on "cue" => :optional
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tailor-platform/tailorctl/releases/download/v1.16.0/tailorctl_darwin_v1.16.0_arm64.tar.gz"
-      sha256 "e0d38d1b5cf956cc7d2f5014b01e6772482752dd9199e653f4784e584fab90b5"
+      url "https://github.com/tailor-platform/tailorctl/releases/download/v1.17.0/tailorctl_darwin_v1.17.0_arm64.tar.gz"
+      sha256 "e790ac533cd76db4d2ea575744915e35d90b3570476301235ec89b3186186c63"
 
       def install
         bin.install "tailorctl"
@@ -24,8 +24,8 @@ class Tailorctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tailor-platform/tailorctl/releases/download/v1.16.0/tailorctl_darwin_v1.16.0_x86_64.tar.gz"
-      sha256 "2505d6f263914b2adc6fe76f288da3f3c45c781bd8312ae62f0a82e0ffa3e378"
+      url "https://github.com/tailor-platform/tailorctl/releases/download/v1.17.0/tailorctl_darwin_v1.17.0_x86_64.tar.gz"
+      sha256 "1f8a041223bd58614071088cbfc575c0a805483fb7c6a30600b7f9d5cff47d9e"
 
       def install
         bin.install "tailorctl"
@@ -41,8 +41,8 @@ class Tailorctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tailor-platform/tailorctl/releases/download/v1.16.0/tailorctl_linux_v1.16.0_arm64.tar.gz"
-      sha256 "983d58db2f0ef4c7e40f22e3e39036370c299cd060abf0e57a8070466f1e9a4d"
+      url "https://github.com/tailor-platform/tailorctl/releases/download/v1.17.0/tailorctl_linux_v1.17.0_arm64.tar.gz"
+      sha256 "9f6a0dd8247fb201d274075ae2fedca18f5184b62e6f58edf34750c2648a03fb"
 
       def install
         bin.install "tailorctl"
@@ -55,8 +55,8 @@ class Tailorctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tailor-platform/tailorctl/releases/download/v1.16.0/tailorctl_linux_v1.16.0_x86_64.tar.gz"
-      sha256 "e9f50abf2342c4f5be781fbc98d607c541e9655f6743867726f197a00b522bfe"
+      url "https://github.com/tailor-platform/tailorctl/releases/download/v1.17.0/tailorctl_linux_v1.17.0_x86_64.tar.gz"
+      sha256 "d288c43d085d5d203556bdeb325a92f669791241222eeee8b3c3707d85ff702c"
 
       def install
         bin.install "tailorctl"
