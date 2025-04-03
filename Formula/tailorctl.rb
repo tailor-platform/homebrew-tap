@@ -15,12 +15,7 @@ class Tailorctl < Formula
 
       def install
         bin.install "tailorctl"
-        bash_output = Utils.safe_popen_read(bin/"tailorctl", "completion", "bash")
-        (bash_completion/"tailorctl").write bash_output
-        zsh_output = Utils.safe_popen_read(bin/"tailorctl", "completion", "zsh")
-        (zsh_completion/"tailorctl").write zsh_output
-        fish_output = Utils.safe_popen_read(bin/"tailorctl", "completion", "fish")
-        (fish_completion/"tailorctl.fish").write fish_output
+        generate_completions_from_executable(bin/"tailorctl", "completion")
       end
     end
     if Hardware::CPU.intel?
@@ -29,12 +24,7 @@ class Tailorctl < Formula
 
       def install
         bin.install "tailorctl"
-        bash_output = Utils.safe_popen_read(bin/"tailorctl", "completion", "bash")
-        (bash_completion/"tailorctl").write bash_output
-        zsh_output = Utils.safe_popen_read(bin/"tailorctl", "completion", "zsh")
-        (zsh_completion/"tailorctl").write zsh_output
-        fish_output = Utils.safe_popen_read(bin/"tailorctl", "completion", "fish")
-        (fish_completion/"tailorctl.fish").write fish_output
+        generate_completions_from_executable(bin/"tailorctl", "completion")
       end
     end
   end
@@ -46,12 +36,7 @@ class Tailorctl < Formula
 
       def install
         bin.install "tailorctl"
-        bash_output = Utils.safe_popen_read(bin/"tailorctl", "completion", "bash")
-        (bash_completion/"tailorctl").write bash_output
-        zsh_output = Utils.safe_popen_read(bin/"tailorctl", "completion", "zsh")
-        (zsh_completion/"tailorctl").write zsh_output
-        fish_output = Utils.safe_popen_read(bin/"tailorctl", "completion", "fish")
-        (fish_completion/"tailorctl.fish").write fish_output
+        generate_completions_from_executable(bin/"tailorctl", "completion")
       end
     end
     if Hardware::CPU.intel?
@@ -60,12 +45,7 @@ class Tailorctl < Formula
 
       def install
         bin.install "tailorctl"
-        bash_output = Utils.safe_popen_read(bin/"tailorctl", "completion", "bash")
-        (bash_completion/"tailorctl").write bash_output
-        zsh_output = Utils.safe_popen_read(bin/"tailorctl", "completion", "zsh")
-        (zsh_completion/"tailorctl").write zsh_output
-        fish_output = Utils.safe_popen_read(bin/"tailorctl", "completion", "fish")
-        (fish_completion/"tailorctl.fish").write fish_output
+        generate_completions_from_executable(bin/"tailorctl", "completion")
       end
     end
   end
