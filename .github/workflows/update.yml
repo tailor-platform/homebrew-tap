@@ -1,0 +1,29 @@
+name: Update formulae
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '00 6,18 * * *'
+
+jobs:
+  update:
+    runs-on: macos-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out code
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - name: Install maltmill
+        run: |
+          brew install Songmu/tap/maltmill
+
+      - name: Update formulae
+        run: |
+          make update-all
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push
+        uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
+        with:
+          add: 'Formula/*.rb'
