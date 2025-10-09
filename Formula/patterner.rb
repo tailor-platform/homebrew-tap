@@ -1,27 +1,27 @@
 class Patterner < Formula
   desc 'patterner is a tool to analyze and present best practices (patterns) for Tailor Platform applications.'
-  version '0.7.1'
+  version '0.8.0'
   homepage 'https://github.com/tailor-platform/patterner'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.7.1/patterner_v0.7.1_darwin_arm64.zip'
-      sha256 '468c6901238ac3f1e00b5465a2e9626a4c5cddb7c1f118c09910436a5e5afc61'
+      url 'https://github.com/tailor-platform/patterner/releases/download/v0.8.0/patterner_v0.8.0_darwin_arm64.zip'
+      sha256 'a12c785112c48f50e8848c8da597c544308200785eddfcd6fe2f2743f0ddad51'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.7.1/patterner_v0.7.1_darwin_amd64.zip'
-      sha256 'ff9e33687fef51d8d348037b50b723b18fdc2eceaba2f68d1c84fa59b07e06ff'
+      url 'https://github.com/tailor-platform/patterner/releases/download/v0.8.0/patterner_v0.8.0_darwin_amd64.zip'
+      sha256 '8c64db2fd529805fe9a6a41c0029cdf138de8e670916bd8fb9ff6f1b1f3994ba'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.7.1/patterner_v0.7.1_linux_arm64.tar.gz'
-      sha256 'd27e60ed4bca4257ebeca79501532811e60eb38ec05768c38defdffc74b0e9be'
+      url 'https://github.com/tailor-platform/patterner/releases/download/v0.8.0/patterner_v0.8.0_linux_arm64.tar.gz'
+      sha256 '4ece581a2057549f609c4adfa2b3831994ad32198dcb7040f5dd0cc27b746191'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.7.1/patterner_v0.7.1_linux_amd64.tar.gz'
-      sha256 '1664db8ff896c58f795ca9f440e8728cc97dc0c5608bfe899b3328ce315c0c76'
+      url 'https://github.com/tailor-platform/patterner/releases/download/v0.8.0/patterner_v0.8.0_linux_amd64.tar.gz'
+      sha256 '493b40e50370246b12da486f5954d9a900fb0ac1a42afc936d3c70a8a578d90c'
     end
   end
 
