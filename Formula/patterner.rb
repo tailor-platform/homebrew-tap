@@ -1,27 +1,27 @@
 class Patterner < Formula
   desc 'patterner is a tool to analyze and present best practices (patterns) for Tailor Platform applications.'
-  version '0.8.0'
+  version '0.9.0'
   homepage 'https://github.com/tailor-platform/patterner'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.8.0/patterner_v0.8.0_darwin_arm64.zip'
-      sha256 'a12c785112c48f50e8848c8da597c544308200785eddfcd6fe2f2743f0ddad51'
+      url 'https://github.com/tailor-platform/patterner/releases/download/v0.9.0/patterner_v0.9.0_darwin_arm64.zip'
+      sha256 '86ba8b54927aa305f703581eb5dc71912a32a40ce01a6a1a9f9d7c988dff0100'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.8.0/patterner_v0.8.0_darwin_amd64.zip'
-      sha256 '8c64db2fd529805fe9a6a41c0029cdf138de8e670916bd8fb9ff6f1b1f3994ba'
+      url 'https://github.com/tailor-platform/patterner/releases/download/v0.9.0/patterner_v0.9.0_darwin_amd64.zip'
+      sha256 '0356e8009a255dd6817084f8f8b0e80ad74ae89549e9d7489295d2b98ccd1b01'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.8.0/patterner_v0.8.0_linux_arm64.tar.gz'
-      sha256 '4ece581a2057549f609c4adfa2b3831994ad32198dcb7040f5dd0cc27b746191'
+      url 'https://github.com/tailor-platform/patterner/releases/download/v0.9.0/patterner_v0.9.0_linux_arm64.tar.gz'
+      sha256 '3a74d7ea84da27fd979680dbece816836c5460e345068f2caf1d6581fbe4cc91'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.8.0/patterner_v0.8.0_linux_amd64.tar.gz'
-      sha256 '493b40e50370246b12da486f5954d9a900fb0ac1a42afc936d3c70a8a578d90c'
+      url 'https://github.com/tailor-platform/patterner/releases/download/v0.9.0/patterner_v0.9.0_linux_amd64.tar.gz'
+      sha256 '91cccd03458fa93c136f1ba992d868e8f60b3c8dd283f2610d2485a1e166cb0b'
     end
   end
 
