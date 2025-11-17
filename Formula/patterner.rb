@@ -5,8 +5,8 @@ class Patterner < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.8.0/patterner_v0.8.0_darwin_arm64.zip'
-      sha256 'a12c785112c48f50e8848c8da597c544308200785eddfcd6fe2f2743f0ddad51'
+      url 'https://github.com/tailor-platform/patterner/archive/refs/tags/v0.9.0.tar.gz'
+      sha256 '9879df97f64d3d7e0c347af29ab842f53a794e700db04d98a5eb328cd36581da'
     end
     if Hardware::CPU.intel?
       url 'https://github.com/tailor-platform/patterner/releases/download/v0.8.0/patterner_v0.8.0_darwin_amd64.zip'
