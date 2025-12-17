@@ -1,27 +1,27 @@
 class Patterner < Formula
   desc 'patterner is a tool to analyze and present best practices (patterns) for Tailor Platform applications.'
-  version '0.9.0'
+  version '0.9.1'
   homepage 'https://github.com/tailor-platform/patterner'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.9.0/patterner_v0.9.0_darwin_arm64.zip'
-      sha256 '86ba8b54927aa305f703581eb5dc71912a32a40ce01a6a1a9f9d7c988dff0100'
+      url 'https://github.com/tailor-platform/patterner/releases/download/v0.9.1/patterner_v0.9.1_darwin_arm64.zip'
+      sha256 'a1a00760a9e2c4776cc68d5d4d48d63c4a27f5cfbf911f464b471a4d4a4ab4ca'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.9.0/patterner_v0.9.0_darwin_amd64.zip'
-      sha256 '0356e8009a255dd6817084f8f8b0e80ad74ae89549e9d7489295d2b98ccd1b01'
+      url 'https://github.com/tailor-platform/patterner/releases/download/v0.9.1/patterner_v0.9.1_darwin_amd64.zip'
+      sha256 '82c2421e0e44bf36c131f86f79f3103b8f38bd47ed59912cc211e234ee68990d'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.9.0/patterner_v0.9.0_linux_arm64.tar.gz'
-      sha256 '3a74d7ea84da27fd979680dbece816836c5460e345068f2caf1d6581fbe4cc91'
+      url 'https://github.com/tailor-platform/patterner/releases/download/v0.9.1/patterner_v0.9.1_linux_arm64.tar.gz'
+      sha256 '78a65b107e37c8adc71131633b910c08dccafaecb1950649599ed456df9394e2'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/tailor-platform/patterner/releases/download/v0.9.0/patterner_v0.9.0_linux_amd64.tar.gz'
-      sha256 '91cccd03458fa93c136f1ba992d868e8f60b3c8dd283f2610d2485a1e166cb0b'
+      url 'https://github.com/tailor-platform/patterner/releases/download/v0.9.1/patterner_v0.9.1_linux_amd64.tar.gz'
+      sha256 '641b9b1d4528df90e6f1a0a4a307831e19c6d001f88be445b362bcf134282646'
     end
   end
 
